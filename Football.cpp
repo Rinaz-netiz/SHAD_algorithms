@@ -31,11 +31,11 @@ PointersToRangeAnswerAndSum AlgorithmImplementation(std::vector<Person>& array_o
     if (array_of_person.size() == 1) {
         return  PointersToRangeAnswerAndSum{.sum = array_of_person[0].value, .left_answer = 0, .right_answer = 0};
     }
+
     if (array_of_person.size() == 2) {
         return  PointersToRangeAnswerAndSum{
             .sum = array_of_person[0].value + array_of_person[1].value, .left_answer = 0, .right_answer = 1};
     }
-    
 
     std::sort(array_of_person.begin(), array_of_person.end(), [](const Person& a, const Person& b) {
         return a.value < b.value;
